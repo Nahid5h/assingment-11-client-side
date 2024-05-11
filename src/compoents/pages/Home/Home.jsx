@@ -1,5 +1,7 @@
 import Location from "../../Location";
+
 import Banner from "./Banner";
+import Newsletter from "./Newsletter";
 
 
 const Home = () => {
@@ -7,6 +9,8 @@ const Home = () => {
         <div>
           <Banner></Banner>
           <Location></Location>
+          <Newsletter></Newsletter>
+         
         </div>
     );
 };
