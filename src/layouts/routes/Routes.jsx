@@ -7,6 +7,7 @@ import AboutUs from "../../compoents/pages/AboutUs";
 import ContactUs from "../../compoents/pages/ContactUs";
 import Login from "../../compoents/Login";
 import Register from "../../compoents/Register";
+import RoomDetail from "../../compoents/pages/RoomDetail";
 
 const router=createBrowserRouter([
     {
@@ -16,11 +17,17 @@ const router=createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch(`${import.meta.env.VITE_API_URL}/featured`)
+                
             },
             {
                 path:'/rooms',
                 element:<Rooms></Rooms>
+            },
+            {
+                path:'/roomdetail/:id',
+                element:<RoomDetail></RoomDetail>,
+                loader:({params})=>fetch(`${import.meta.env.VITE_API_URL}/room/${params.id}`)
+                
             },
             {
                 path:'/mybooking',
