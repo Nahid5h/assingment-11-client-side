@@ -66,20 +66,7 @@ const Navber = () => {
           About Us
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/contactUs"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "hover:bg-blue-600 bg-blue-500 text-white  font-semibold "
-              : ""
-          }
-        >
-          Contact Us
-        </NavLink>
-      </li>
+   
     </>
   );
   return (

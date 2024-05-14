@@ -4,15 +4,17 @@ import Home from "../../compoents/pages/Home/Home";
 import Rooms from "../../compoents/pages/Rooms";
 import MyBooking from "../../compoents/pages/MyBooking";
 import AboutUs from "../../compoents/pages/AboutUs";
-import ContactUs from "../../compoents/pages/ContactUs";
+
 import Login from "../../compoents/Login";
 import Register from "../../compoents/Register";
 import RoomDetail from "../../compoents/pages/RoomDetail";
+import ErrorPage from "../../compoents/pages/ErrorPage";
 
 const router=createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
@@ -37,10 +39,7 @@ const router=createBrowserRouter([
                 path:'/aboutus',
                 element:<AboutUs></AboutUs>
             },
-            {
-                path:'/contactus',
-                element:<ContactUs></ContactUs>
-            },
+           
             {
                 path:'/login',
                 element:<Login></Login>
