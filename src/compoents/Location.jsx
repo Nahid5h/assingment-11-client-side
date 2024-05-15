@@ -2,6 +2,12 @@
 import GoogleMapReact from 'google-map-react';
 import { gooleAPIkry } from '../GooleAPIKey';
 import { FaMapMarkerAlt } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({ delay: 500, // values from 0 to 3000, with step 50ms
+duration: 400, // values from 0 to 3000, with step 50ms
+easing: 'ease',});
 const AnyReactComponent = ({text}) => <div style={{color:'red'}}><FaMapMarkerAlt></FaMapMarkerAlt></div>;
 const Location = () => {
     const defaultProps = {
@@ -13,7 +19,10 @@ const Location = () => {
       };
     return (
         <>
-            <div style={{ height: '500px', width: ''  }}>
+
+            <div
+            data-aos="fade-right"
+             style={{ height: '500px', width: ''  }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: gooleAPIkry }}
         defaultCenter={defaultProps.center}

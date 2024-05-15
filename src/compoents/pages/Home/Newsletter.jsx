@@ -1,6 +1,13 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({ delay: 500, // values from 0 to 3000, with step 50ms
+duration: 400, // values from 0 to 3000, with step 50ms
+easing: 'ease',});
 const Newsletter = () => {
   return (
     <div
+    data-aos="fade-left"
       className="bg-cover rounded-xl lg:h-[500px] mt-7 bg-center "
       style={{
         backgroundImage:

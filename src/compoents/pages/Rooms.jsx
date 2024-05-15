@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const Rooms = () => {
@@ -15,7 +16,12 @@ const Rooms = () => {
   
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-11 gap-6 mt-8">
-        {featured.filter(a=>a.Availability).map((f) => (
+        <Helmet>
+                
+                <title>rooms</title>
+                
+            </Helmet>
+        {featured.map((f) => (
           <div key={f._id}>
             <div className=" mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <Link to={`/roomdetail/${f._id}`}>
