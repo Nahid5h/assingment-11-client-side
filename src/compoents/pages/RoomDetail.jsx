@@ -37,7 +37,7 @@ const RoomDetail = () => {
     const bookData = { email, name, date, price, describtion };
     const Availability = false;
 
-    fetch(`${import.meta.env.VITE_API_URL}/update/${room._id}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/updatee/${room._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -106,7 +106,7 @@ const RoomDetail = () => {
               Cost:{PricePerNight}${" "}
             </button>
 
-            {room.Availability ? (
+            {room?.Availability ? (
               <button className="btn rounded-full text-[#23BE0A] text-2xl">
                 available
               </button>
@@ -128,7 +128,7 @@ const RoomDetail = () => {
              </label> */}
 
          
-          {room.Availability ? (
+          {room?.Availability ? (
                <label
                htmlFor="my_modal_6"
                className="btn
