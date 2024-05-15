@@ -9,6 +9,7 @@ import Login from "../../compoents/Login";
 import Register from "../../compoents/Register";
 import RoomDetail from "../../compoents/pages/RoomDetail";
 import ErrorPage from "../../compoents/pages/ErrorPage";
+import UpdateBooking from "../../compoents/UpdateBooking";
 
 const router=createBrowserRouter([
     {
@@ -47,6 +48,10 @@ const router=createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/updateInformation/:id',
+                element:<UpdateBooking></UpdateBooking>
             }
 
         ]
