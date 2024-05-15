@@ -18,7 +18,7 @@ const RoomDetail = () => {
     RoomDescription,
     SpecialOffers,
     RoomImages,
-    
+
     RoomSize,
 
     PricePerNight,
@@ -105,29 +105,41 @@ const RoomDetail = () => {
             <button className="btn rounded-full text-[#23BE0A] text-2xl">
               Cost:{PricePerNight}${" "}
             </button>
-            
-              {room.Availability? (
+
+            {room.Availability ? (
               <button className="btn rounded-full text-[#23BE0A] text-2xl">
-         available
-              </button>):(
+                available
+              </button>
+            ) : (
               <button className="btn rounded-full text-[#23BE0A] text-2xl">
-          unavailable
-              </button>)}
-              
-             
+                unavailable
+              </button>
+            )}
           </div>
 
           {/* The button to open modal */}
+          {/* <label
+               htmlFor="my_modal_6"
+               className="btn
+     
+               w-full text-white rounded-full bg-[#23BE0A] text-2xl "
+             >
+               Book Now
+             </label> */}
 
-          <label
-            htmlFor="my_modal_6"
-            className="btn
-  w-full text-white rounded-full bg-[#23BE0A] text-2xl
- "
-          >
-            Book Now
+         
+          {room.Availability ? (
+               <label
+               htmlFor="my_modal_6"
+               className="btn
+     
+               w-full text-white rounded-full bg-[#23BE0A] text-2xl "
+             >
+               Book Now
+             </label>
+            ) : ( <button className="btn  w-full text-white rounded-full bg-[#23BE0A] text-2xl" disabled="disabled">Book Now</button>
             
-          </label>
+            )}
 
           {/* Put this part before </body> tag */}
           <input
