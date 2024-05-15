@@ -10,6 +10,10 @@ import Register from "../../compoents/Register";
 import RoomDetail from "../../compoents/pages/RoomDetail";
 import ErrorPage from "../../compoents/pages/ErrorPage";
 import UpdateBooking from "../../compoents/UpdateBooking";
+import PrivetRout from "../../compoents/pages/providers/PrivetRout";
+
+
+
 
 const router=createBrowserRouter([
     {
@@ -28,13 +32,19 @@ const router=createBrowserRouter([
             },
             {
                 path:'/roomdetail/:id',
-                element:<RoomDetail></RoomDetail>,
+                element:<PrivetRout>
+                    <RoomDetail></RoomDetail>
+                </PrivetRout>,
                 loader:({params})=>fetch(`${import.meta.env.VITE_API_URL}/room/${params.id}`)
                 
             },
             {
                 path:'/mybooking',
-                element:<MyBooking></MyBooking>
+                element:<PrivetRout>
+                     <MyBooking></MyBooking>
+                </PrivetRout>
+                    
+              
             },
             {
                 path:'/aboutus',
